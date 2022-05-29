@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Иконка в названии сайта -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Иконка в названии сайта -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ссылка на библиотеку бутстрап JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ссылка на библиотеку бутстрап JS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <!-- ссылка на библиотеку бутстрап CSS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My favourite places</title>
+    <!-- Название сайта -->
+    <style>
+      .card {
+        border-radius: 1em; /* скругленные углы самой карточки */
+        text-align: center; /* текст, фото и кнопка отцентрованы */
+        padding: 1em; /*внутренние отступы, внутри карточки  */
+      }
+      .card:hover {
+        /* Изменение карточки при наведении курсора */
+        background-color: #e7e7e7; /* Изменение цвета при наведении курсора */
+      }
+      .card img {
+        /* Изменение всех картинок внутри div class=card */
+        border-radius: 50%; /* Изменили скругление краев до полностью круглой картинки */
+        width: 50%; /* Сделали картинку поменьше в 2 раза, чтобы она аккуратнее смотрелась */
+        margin: auto; /* сделали отступ картинки одинаквым со всех сторон, таким обазом отцентровав её */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- Задаем классы для навигационной панели  -->
+      <div class="container">
+        <!-- Задаем класс контейнер, чтобы далее работать с элементами навигационной панели -->
+        <a class="navbar-brand p-0" href="index.html"
+          ><!-- Создаем логотип с ссылкой в начале навигационной панели. p-0 чтобы убрать ненужные здесь отступы -->
+          <img
+            src="KinAi.png"
+            alt="KinAi"
+            width="150"
+          /><!-- Прикрепляем картинку и редактируем размер -->
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span></button
+        ><!-- Кнопка меню появляющаяся на планшетах и телефонах. Делаем страницу адаптивной -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Создаем меню навигационной панели -->
+          <ul class="navbar-nav">
+            <!-- Создаем список -->
+            <li class="nav-item">
+              <!-- Создеам элемент списка -->
+              <a class="nav-link" aria-current="page" href="index.html">Home</a
+              ><!-- Делаем его кликабельным -->
+            </li>
+            <li class="nav-item">
+              <!-- Создаем следующий элемент списка -->
+              <a class="nav-link active" href="places.html">Favourite places</a
+              ><!-- Снова делаем его кликабельным. Прописываем active, чтобы она подсвечивалась давая нам знать, что мы на этой вкладке -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container my-5">
+      <!-- Создаем основной контент страницы, карточки. Устанавливаем отступы (margin) по оси y. То есть устанавливаем верхний и нижний отступ -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+        <!-- Делаем страницу адаптивной, устанавливаем количество строк на разных устройствах. Создаем промежутки между карточками g-5 -->
+        <div class="col">
+          <!-- Создаем класс с колонками, так как у нас уже есть класс с строками, чтобы все работало корректно. И отсюда соответственно начинается создание карточки -->
+          <div class="card">
+            <!-- Создаем первую карточку -->
+            <img
+              src="https://picsum.photos/id/1018/300"
+              class="card-img-top"
+              alt="My image"
+            />
+            <!-- Создание картинки в карточке -->
+            <div class="card-body">
+              <!-- Устанавливаем класс class-body чтобы внести туда текст и кнопку -->
+              <h5 class="card-title">Cliff road</h5>
+              <!-- Заголовок карточки -->
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Dolorum nulla maxime voluptates excepturi consectetur quo, iste
+                repellendus vel ad tenetur.
+              </p>
+              <!-- Делаем след. абзац и пишем основной комментарий -->
+              <a
+                href="https://picsum.photos/id/1018/1500"
+                target="_blank"
+                class="btn btn-primary"
+                >Open photo </a
+              ><!-- И создаем кнопку. target=_blank переносит нас на другую вкладку при нажатии. class="btn btn-primary" превращает обычную ссылку в кнопку, при том стилизованную под primary -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- Все повторяется в точности как в первой карточке -->
+          <div class="card">
+            <img
+              src="https://picsum.photos/id/1057/300"
+              class="card-img-top"
+              alt="My image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Coast</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                non, obcaecati earum quisquam incidunt provident!
+              </p>
+              <a
+                href="https://picsum.photos/id/1057/1500"
+                target="_blank"
+                class="btn btn-primary"
+                >Open photo</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <!-- Все то же самое -->
+          <div class="card">
+            <img
+              src="https://picsum.photos/id/177/300"
+              class="card-img-top"
+              alt="My image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Mountains</h5>
+              <p class="card-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit
+                deleniti fugiat dolor quas ad corporis, in error sapiente.
+              </p>
+              <a
+                href="https://picsum.photos/id/177/1500"
+                target="_blank"
+                class="btn btn-primary"
+                >Open photo</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- Закрываем все теги. Конец -->
+</html>
